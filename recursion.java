@@ -11,19 +11,33 @@ public class recursion {
 //        printNo(n);
 //    }
 //----------------------------------------------------------------------------------------------------------------------
-    public static void printSum(int i, int n, int sum){
-        if(i == n){
-            sum += i;
-            System.out.println(sum);
-            return;
+//    public static void printSum(int i, int n, int sum){
+//        if(i == n){
+//            sum += i;
+//            System.out.println(sum);
+//            return;
+//        }
+//        sum = sum + i;
+//        printSum(i+1, n, sum);
+//
+//    }
+//
+//    public static void main(String arg[]){
+//        int n = 10;
+//            printSum(1, 5, 0);
+//        }
+//----------------------------------------------------------------------------------------------------------------------
+    public static int factorial(int n){
+        if(n == 1 || n == 0){
+            return 1;
         }
-        sum = sum + i;
-        printSum(i+1, n, sum);
+
+        int fac_n = n * factorial(n-1);
+        return fac_n;
 
     }
-
     public static void main(String arg[]){
-        int n = 10;
-            printSum(1, 5, 0);
-        }
+        int ans = factorial(5);
+        System.out.println(ans);
+    }
 }
