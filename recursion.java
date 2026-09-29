@@ -1,0 +1,29 @@
+public class recursion {
+//    public static void printNo(int n){
+//        if (n == 5){
+//            return;
+//        }
+//        System.out.println(n);
+//        printNo(n+1);
+//    }
+//    public static void main(String args[]){
+//        int n = 1;
+//        printNo(n);
+//    }
+//----------------------------------------------------------------------------------------------------------------------
+    public static void printSum(int i, int n, int sum){
+        if(i == n){
+            sum += i;
+            System.out.println(sum);
+            return;
+        }
+        sum = sum + i;
+        printSum(i+1, n, sum);
+
+    }
+
+    public static void main(String arg[]){
+        int n = 10;
+            printSum(1, 5, 0);
+        }
+}
