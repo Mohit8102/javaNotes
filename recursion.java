@@ -27,17 +27,31 @@ public class recursion {
 //            printSum(1, 5, 0);
 //        }
 //----------------------------------------------------------------------------------------------------------------------
-    public static int factorial(int n){
-        if(n == 1 || n == 0){
+//    public static int factorial(int n){
+//        if(n == 1 || n == 0){
+//            return 1;
+//        }
+//
+//        int fac_n = n * factorial(n-1);
+//        return fac_n;
+//
+//    }
+//    public static void main(String arg[]){
+//        int ans = factorial(5);
+//        System.out.println(ans);
+//    }
+//----------------------------------------------------------------------------------------------------------------------
+    public static int calfab(int n){
+        if(n == 1){
             return 1;
+        }if(n == 0){
+            return 0;
         }
-
-        int fac_n = n * factorial(n-1);
-        return fac_n;
-
+        int fab = (n - 2) + (n - 1);
+        return fab;
     }
     public static void main(String arg[]){
-        int ans = factorial(5);
+        int ans = calfab(3);
         System.out.println(ans);
     }
 }
