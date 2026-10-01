@@ -41,17 +41,19 @@ public class recursion {
 //        System.out.println(ans);
 //    }
 //----------------------------------------------------------------------------------------------------------------------
-    public static int calfab(int n){
-        if(n == 1){
-            return 1;
-        }if(n == 0){
-            return 0;
+    public static void calFab(int a, int b, int n){
+        if(n == 0){
+            return;
         }
-        int fab = (n - 2) + (n - 1);
-        return fab;
+        int c = a + b;
+        System.out.println(c);
+        calFab(b, c, n-1);
     }
     public static void main(String arg[]){
-        int ans = calfab(3);
-        System.out.println(ans);
+       int a = 0, b = 1;
+        System.out.println(a);
+        System.out.println(b);
+        int n = 10;
+        calFab(a, b, n-2);
     }
 }
