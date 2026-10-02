@@ -57,16 +57,19 @@ public class recursion {
 //        calFab(a, b, n-2);
 //    }
 //----------------------------------------------------------------------------------------------------------------------
-    public static void calXpN(int x, int n){
-        if( n == 0){
-            return;
+    public static int calXpN(int x, int n){
+        if(n == 0){
+            return 1;
         }
-        int a = 1;
-        a = a * x;
-        calXpN(a, n-1);
-        System.out.println(a);
+        if(x == 0){
+            return 0;
+        }
+        int xpnm1 = calXpN(2, n-1);
+        int xpn = x * xpnm1;
+        return xpn;
     }
     public static void main(String args[]){
-        calXpN(2, 5);
+        int ans = calXpN(2, 5);
+        System.out.println(ans);
     }
 }
