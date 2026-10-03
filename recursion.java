@@ -65,8 +65,8 @@ public class recursion {
             return 0;
         }
         int xpnm1 = calXpN(2, n-1);
-        int xpn = x * xpnm1;
-        return xpn;
+        int xpN = x * xpnm1;
+        return xpN;
     }
     public static void main(String args[]){
         int ans = calXpN(2, 5);
